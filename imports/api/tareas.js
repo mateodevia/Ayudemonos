@@ -8,10 +8,7 @@ export const Tareas = new Mongo.Collection('tareas');
 if(Meteor.isServer){
     Meteor.publish('tareas',()=>{
         return Tareas.find({
-            $or: [
-                { groupID: { $ne: true } },
-                { owners: this.userId },
-              ],
+           
         });
     });
 
@@ -19,6 +16,7 @@ if(Meteor.isServer){
 
 Meteor.methods({
     'tareas.insert':(description,groupId,dueDate)=>{
+
 
         const gruposUsuario=Meteor.users.findOne(this.userId).grupos;
      //db.users.findOne({"_id":ObjectId("5d9eada4349da0a208beedab")).grupos
@@ -51,10 +49,23 @@ Meteor.methods({
     },
     'tareas.tomar':(taskId)=>{
 
-        Tareas.update({ "_id" : ObjectId("5d9eada4349da0a208beedab") }, { $push: { currentOwners: this.userId } });
-        Tareas.update({ "_id" : ObjectId("5d9eada4349da0a208beedab") }, { $set:{delayed: false } });
+        Tareas.update({ "_id" : taskId }, { $push: { currentOwners: this.userId } });
+        Tareas.update({ "_id" : taskId }, { $set:{delayed: false } });
+
+        //Tareas.update({ "_id" : ObjectId("5d9eada4349da0a208beedab") }, { $push: { currentOwners: this.userId } });
+        //Tareas.update({ "_id" : ObjectId("5d9eada4349da0a208beedab") }, { $set:{delayed: false } });
+    },
+    'tareas.pedirAyuda':(taskId)=>{
+
+        Tareas.update({ "_id" : taskId }, { $set:{delayed: true } });
 
     },
+    'tareas.marcarPorcentaje':(taskId,porcent)=>{
+        
+    Tareas.update({ "_id" : taskId }, { $set:{porcentageDone: porcent } });
+    }
+
+    
 
 
 });
