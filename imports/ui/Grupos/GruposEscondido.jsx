@@ -26,7 +26,7 @@ class GruposEscondido extends Component {
             className="agregarGrupo"
             type="text"
             ref="textInput"
-            placeholder="+ Nuevo Grupo"
+            placeholder="+ Nuevo"
           />
         </form>
       </div>

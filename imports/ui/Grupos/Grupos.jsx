@@ -27,7 +27,7 @@ class Grupos extends Component {
             className="agregarGrupo"
             type="text"
             ref={nuevoGrupo => (this.nuevoGrupo = nuevoGrupo)}
-            placeholder="+ Nuevo Grupo"
+            placeholder="+ Nuevo"
           />
         </form>
       </div>
