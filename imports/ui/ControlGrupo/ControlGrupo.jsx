@@ -1,6 +1,4 @@
 import React from "react";
-import ModalAgregarIntegrante from "../ModalAgregarIntegrante/ModalAgregarIntegrante";
-import ModalAgregarTarea from "../ModalAgregarTarea/ModalAgregarTarea";
 import "./ControlGrupo.css";
 
 function ControlGrupo() {
