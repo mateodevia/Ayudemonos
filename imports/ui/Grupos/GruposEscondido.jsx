@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./GruposEscondido.css";
+import "./Grupos.css";
 
 class GruposEscondido extends Component {
   constructor(props) {
@@ -8,8 +8,8 @@ class GruposEscondido extends Component {
   }
   render() {
     return (
-      <div className="fijoEscondido">
-        <h2 id="tituloGruposEscondido">Grupos</h2>
+      <div className="fijo">
+        <h2>Grupos</h2>
         <p>Hola</p>
         <p>Hola</p>
         <p>Hola</p>

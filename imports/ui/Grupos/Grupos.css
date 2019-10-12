@@ -2,11 +2,3 @@
   position: fixed;
   color: #45dcb8;
 }
-
-@media (max-width: 575px) {
-  .fijo {
-    position: fixed;
-    width: 0 !important;
-    overflow: hidden;
-  }
-}

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import AyudaList from "./AyudaList/AyudaList";
 import MisTareas from "./MisTareasList/MisTareasList";
 import Grupos from "./Grupos/Grupos";
-import GruposEscondido from "./GruposEscondido/GruposEscondido";
+import GruposEscondido from "./Grupos/GruposEscondido";
 import NavBar from "./NavBar/NavBar";
 import "./App.css";
 
@@ -20,10 +20,10 @@ class App2 extends Component {
           <div className="row">
             {this.state.menuOpen && (
               <React.Fragment>
-                <div className="col-6 col-sm-3 col-md-3 navBarGrupos noPadding">
+                <div className="col-5 col-sm-3 col-md-3 navBarGrupos noPadding">
                   <GruposEscondido />
                 </div>
-                <div className="col-6 col-sm-9 col-md-9 noPadding">
+                <div className="col-7 col-sm-9 col-md-9 noPadding">
                   <NavBar hamburgerClick={this.hamburgerClick} />
                   <AyudaList />
                   <MisTareas />

@@ -13,7 +13,7 @@ class NavBar extends Component {
           <button className="hamburger" onClick={this.handleClick}>
             ☰
           </button>
-          <h1 className="h1Nav">Ayudémosnos!</h1>
+          <h1 className="h1Nav">Ayudémonos!</h1>
         </ul>
       </nav>
     );
