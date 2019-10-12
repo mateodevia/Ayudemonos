@@ -14,14 +14,6 @@ function ControlGrupo() {
       <button className="botonControl" onClick={() => setModalShow2(true)}>
         Agregar Tarea
       </button>
-      <ModalAgregarIntegrante
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
-      <ModalAgregarTarea
-        show={modalShow2}
-        onHide={() => setModalShow2(false)}
-      />
     </React.Fragment>
   );
 }
