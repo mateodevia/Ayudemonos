@@ -10,7 +10,18 @@ class App2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuOpen: false
+      menuOpen: false,
+      selected: "Web",
+      grupos: [
+        {
+          id: 1,
+          nombre: "Moviles"
+        },
+        {
+          id: 2,
+          nombre: "Web"
+        }
+      ]
     };
   }
   render() {
@@ -21,7 +32,11 @@ class App2 extends Component {
             {this.state.menuOpen && (
               <React.Fragment>
                 <div className="col-5 col-sm-3 col-md-3 navBarGrupos noPadding">
-                  <GruposEscondido />
+                  <GruposEscondido
+                    selected={this.state.selected}
+                    grupos={this.state.grupos}
+                    handleSelected={this.handleSelected}
+                  />
                 </div>
                 <div className="col-7 col-sm-9 col-md-9 noPadding">
                   <NavBar hamburgerClick={this.hamburgerClick} />
@@ -33,7 +48,11 @@ class App2 extends Component {
             {!this.state.menuOpen && (
               <React.Fragment>
                 <div className="col-0 col-sm-3 col-md-3 navBarGrupos noPadding">
-                  <Grupos />
+                  <Grupos
+                    selected={this.state.selected}
+                    grupos={this.state.grupos}
+                    handleSelected={this.handleSelected}
+                  />
                 </div>
                 <div className="col-12 col-sm-9 col-md-9 noPadding">
                   <NavBar hamburgerClick={this.hamburgerClick} />
@@ -50,6 +69,9 @@ class App2 extends Component {
 
   hamburgerClick = () => {
     this.setState({ menuOpen: !this.state.menuOpen });
+  };
+  handleSelected = nombre => {
+    this.setState({ selected: nombre });
   };
 }
 

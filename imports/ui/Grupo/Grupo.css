@@ -1,3 +1,17 @@
 .tituloGrupo {
-  margin: 15px;
+  padding: 15px;
+  margin: 0;
+}
+
+.tituloGrupo:hover {
+  background-color: #45dcb973;
+  color: white;
+}
+
+.tituloGrupoSelected {
+  padding: 15px;
+  margin: 0;
+  background-color: #45dcb8;
+  color: white;
+  font-weight: bold;
 }

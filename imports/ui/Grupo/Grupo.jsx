@@ -7,7 +7,19 @@ class Grupo extends Component {
     this.state = {};
   }
   render() {
-    return <h5 className="tituloGrupo">{this.props.grupo.nombre}</h5>;
+    if (this.props.grupo.nombre === this.props.selected) {
+      return (
+        <li>
+          <h5 className="tituloGrupoSelected">{this.props.grupo.nombre}</h5>
+        </li>
+      );
+    } else {
+      return (
+        <li onClick={() => this.props.handleSelected(this.props.grupo.nombre)}>
+          <h5 className="tituloGrupo">{this.props.grupo.nombre}</h5>
+        </li>
+      );
+    }
   }
 }
 
