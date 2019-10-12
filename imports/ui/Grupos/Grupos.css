@@ -3,10 +3,6 @@
   color: #45dcb8;
 }
 
-#tituloGrupos {
-  margin: 10px;
-}
-
 @media (max-width: 575px) {
   .fijo {
     position: fixed;

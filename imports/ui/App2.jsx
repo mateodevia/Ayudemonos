@@ -20,7 +20,7 @@ class App2 extends Component {
           <div className="row">
             {this.state.menuOpen && (
               <React.Fragment>
-                <div className="col-6 col-sm-3 col-md-3 navBarGrupos">
+                <div className="col-6 col-sm-3 col-md-3 navBarGrupos noPadding">
                   <GruposEscondido />
                 </div>
                 <div className="col-6 col-sm-9 col-md-9 noPadding">
@@ -32,7 +32,7 @@ class App2 extends Component {
             )}
             {!this.state.menuOpen && (
               <React.Fragment>
-                <div className="col-0 col-sm-3 col-md-3 navBarGrupos">
+                <div className="col-0 col-sm-3 col-md-3 navBarGrupos noPadding">
                   <Grupos />
                 </div>
                 <div className="col-12 col-sm-9 col-md-9 noPadding">
