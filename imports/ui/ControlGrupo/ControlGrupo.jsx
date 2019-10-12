@@ -10,7 +10,7 @@ class ControlGrupo extends Component {
     return (
       <React.Fragment>
         <button className="botonControl">Agregar Integrante</button>
-        <button className="botonControl">Agregar Tarea</button>
+        <button className="botonControl">Agregar Tarea2</button>
       </React.Fragment>
     );
   }
